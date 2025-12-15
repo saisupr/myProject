@@ -6,7 +6,7 @@ import org.mapstruct.Mapping;
 
 @Mapper(componentModel = "spring")
 public interface CustomerMapper {
-
+//this is customer mapper
     Customer toDto(CustomerEntity customerEntity);
 
     @Mapping(target = "password", expression = "java(new org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder().encode(customer.getPassword()))")
